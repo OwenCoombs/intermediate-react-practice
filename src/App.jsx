@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Title = () => {
   return (
-    <h1>
+    <h1 className="text-center">
       Your Team
     </h1>
   )
@@ -10,9 +10,11 @@ const Title = () => {
 
 function App() {
   return (
-    <div className="p-5">
-      <Link to='/about'>About</Link>
+    <div className="p-5 text-center">
       <Title />
+      <button>
+      <Link to='/about' id="editTeam">Edit Your Team</Link>
+      </button>
     </div>
   )
 }
