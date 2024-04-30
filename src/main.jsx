@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
@@ -46,6 +46,14 @@ const router = createBrowserRouter([
     ]
   }
 ])
+
+const MemberContext = createContext()
+
+const MemberProvider = ({ children }) => {
+  const [members, setMembers] = useState('addmembers')
+}
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
